@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Premium - Menú Saludable</title>
+    <!-- Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Hoja de Estilos CSS Separada -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Fondo decorativo exterior -->
+    <div class="bg-decorations">
+        <span class="bg-item leaf-top-left">🌿</span>
+        <span class="bg-item orange-mid-left">🍊</span>
+        <span class="bg-item orange-mid-right">🍊</span>
+        <span class="bg-item leaf-bottom-left">🌱</span>
+        <span class="bg-item leaf-bottom-right">🌿</span>
+    </div>
+
+    <!-- Contenedor principal de la página -->
+    <div class="site-wrapper">
+        
+        <!-- ENCABEZADO Y NAVEGACIÓN -->
+        <header class="main-header" id="inicio">
+            <div class="header-container">
+                <div class="logo">
+                    <span class="logo-icon">🌿</span>
+                    <span class="logo-text">RESTAURANTE</span>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="#inicio">INICIO</a></li>
+                        <li><a href="#menu">MENÚ</a></li>
+                        <li><a href="#beneficio">PÁGINAS</a></li>
+                        <li><a href="#promo">BLOG</a></li>
+                        <li><a href="#contacto">CONTÁCTANOS</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="#contacto" class="icon-btn" title="Usuario">👤</a>
+                    <a href="#menu" class="icon-btn" title="Carrito">🛒</a>
+                    <a href="#menu" class="btn btn-orange">COMPRAR AHORA</a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- SECCIÓN PRINCIPAL (HERO) -->
+            <section class="hero-section">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <span class="subtitle">Restaurante Premium</span>
+                        <h1>Anida Dedelay</h1>
+                        <p>LA MEJOR ENSALADA SALUDABLE SERVIDA EN NUESTRO RESTAURANTE</p>
+                        
+                        <!-- BOTÓN DESPLEGABLE INTERACTIVO -->
+                        <details class="desplegable-info">
+                            <summary class="btn btn-orange">CONOCER MÁS</summary>
+                            <p class="texto-oculto">
+                                🥗 Elaborada con vegetales orgánicos seleccionados y un aderezo especial de la casa.
+                            </p>
+                        </details>
+
+                    </div>
+                    <div class="hero-image-wrapper">
+                        <img src="img/hero-plate.jpg" alt="Plato saludable con ensalada y frutos" class="hero-plate img-uniform">
+                        <span class="inner-leaf leaf-1">🍃</span>
+                        <span class="inner-leaf leaf-2">🍃</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN: BENEFICIO DE LA NARANJA -->
+            <section class="benefit-section" id="beneficio">
+                <div class="benefit-grid">
+                    <div class="benefit-content">
+                        <h2>Beneficios de la Naranja</h2>
+                        <p>Imagina la frescura y el sol de verano en cada gota de jugo natural.</p>
+                        
+                        <!-- BOTÓN DESPLEGABLE INTERACTIVO -->
+                        <details class="desplegable-info">
+                            <summary class="btn btn-orange">CONOCER MÁS</summary>
+                            <p class="texto-oculto">
+                                🍊 Rica en vitamina C, antioxidantes y potasio para fortalecer tu sistema inmune.
+                            </p>
+                        </details>
+
+                    </div>
+                    <div class="benefit-media">
+                        <img src="img/orange-slice.png" alt="Rodaja de naranja" class="floating-orange img-uniform">
+                        <img src="img/orange-juicer.jpg" alt="Exprimidor y vaso de jugo de naranja" class="juicer-img img-uniform">
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN: MENÚ / TARJETAS DE PRODUCTOS (INTERACTIVAS) -->
+            <section class="cards-section" id="menu">
+                <div class="section-header">
+                    <h2>NUESTRO MENÚ ESPECIAL</h2>
+                    <p>Haz clic en cualquier opción para ver la imagen en grande y comprar</p>
+                </div>
+                <div class="cards-grid">
+                    
+                    <!-- Tarjeta 1 -->
+                    <article class="card" onclick="abrirModal('ENSALADA TROPICAL FRESCA', '$12.99', 'Frutas seleccionadas del día con aderezo de yogur natural y miel orgánica.', 'img/food-1.jpg')">
+                        <figure class="card-image">
+                            <img src="img/food-1.jpg" alt="Ensalada Tropical Fresca" class="img-uniform">
+                            <span class="zoom-badge">🔍 Ampliar</span>
+                        </figure>
+                        <div class="card-info price-info">
+                            <h3>ENSALADA TROPICAL FRESCA</h3>
+                            <span class="price">$12.99</span>
+                            <p class="description">Frutas seleccionadas del día</p>
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta 2 -->
+                    <article class="card" onclick="abrirModal('JUGO CÍTRICO ORGÁNICO', '$19.99', 'Naranjas frescas e hidratantes recién exprimidas con toque de menta.', 'img/food-2.jpg')">
+                        <figure class="card-image">
+                            <img src="img/food-2.jpg" alt="Jugo Cítrico Orgánico" class="img-uniform">
+                            <span class="zoom-badge">🔍 Ampliar</span>
+                        </figure>
+                        <div class="card-info price-info">
+                            <h3>JUGO CÍTRICO ORGÁNICO</h3>
+                            <span class="price">$19.99 / 90.99€</span>
+                            <p class="description">Cítricos 100% orgánicos</p>
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta 3 -->
+                    <article class="card" onclick="abrirModal('BOWL DE FRUTOS ROJOS', '$15.50', 'Deliciosa combinación de fresas, arándanos y frambuesas ricas en antioxidantes.', 'img/food-3.jpg')">
+                        <figure class="card-image">
+                            <img src="img/food-3.jpg" alt="Bowl de Frutos Rojos" class="img-uniform">
+                            <span class="zoom-badge">🔍 Ampliar</span>
+                        </figure>
+                        <div class="card-info price-info">
+                            <h3>BOWL DE FRUTOS ROJOS</h3>
+                            <span class="price">$15.50</span>
+                            <p class="description">Rico en antioxidantes naturales</p>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- SECCIÓN: PROMOCIÓN DESTACADA -->
+            <section class="promo-section" id="promo">
+                <div class="promo-grid">
+                    <div class="promo-text">
+                        <h2>Disfruta el verdadero sabor natural y saludable.</h2>
+                    </div>
+                    <div class="promo-image-box">
+                        <img src="img/berries.jpg" alt="Frutas rojas silvestres" class="img-uniform">
+                    </div>
+                    <div class="promo-callout">
+                        <div class="callout-inner">
+                            <h3>BENEFICIO EXCLUSIVO</h3>
+                            
+                            <!-- BOTÓN DESPLEGABLE INTERACTIVO -->
+                            <details class="desplegable-info">
+                                <summary class="btn btn-orange">LEER MÁS</summary>
+                                <p class="texto-oculto">
+                                    🎁 Obtén un 15% de descuento en tu primera compra pagando con tarjeta.
+                                </p>
+                            </details>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- PIE DE PÁGINA (FOOTER) -->
+        <footer class="main-footer" id="contacto">
+            <div class="footer-grid">
+                <!-- Columna 1 -->
+                <div class="footer-col footer-img-col">
+                    <div class="footer-figure">
+    <img src="img/cherries.jpg" alt="Cerezas rojas frescas" class="img-uniform">
+</div>
+                </div>
+
+                <!-- Columna 2 -->
+                <div class="footer-col footer-menu-col">
+                    <h4>NUESTROS BENEFICIOS</h4>
+                    <div class="benefit-icons">
+                        <div class="icon-item">
+                            <span class="icon">🌾</span>
+                            <h5>FRESCO</h5>
+                            <p>Ingredientes 100% naturales</p>
+                        </div>
+                        <div class="icon-item">
+                            <span class="icon">🍊</span>
+                            <h5>VITAMINAS</h5>
+                            <p>Recetas nutracéuticas</p>
+                        </div>
+                        <div class="icon-item">
+                            <span class="icon">🥤</span>
+                            <h5>ORGÁNICO</h5>
+                            <p>Especias seleccionadas</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna 3 -->
+                <div class="footer-col footer-hours-col">
+                    <h4>HORARIO DE ATENCIÓN</h4>
+                    <ul class="hours-list">
+                        <li><span>Lunes</span> <span>17:00 pm - 23:00</span></li>
+                        <li><span>Martes</span> <span>13:00 pm - 23:00</span></li>
+                        <li><span>Miércoles</span> <span>17:00 pm - 23:00</span></li>
+                        <li><span>Jueves</span> <span>17:00 pm - 23:00</span></li>
+                        <li><span>Viernes</span> <span>17:00 pm - 23:00</span></li>
+                    </ul>
+                    <div class="quick-links">
+                        <a href="#inicio">ENLACES RÁPIDOS</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- VENTANA MODAL (VISTA AMPLIADA DEL PRODUCTO) -->
+    <div class="modal-overlay" id="modalProducto" onclick="cerrarModalAfuera(event)">
+        <div class="modal-container">
+            <button class="modal-close" onclick="cerrarModal()">&times;</button>
+            <div class="modal-content-grid">
+                <div class="modal-image-box">
+                    <img id="modalImg" src="" alt="Producto en tamaño grande">
+                </div>
+                <div class="modal-details">
+                    <h3 id="modalTitulo">Nombre del Producto</h3>
+                    <div class="modal-price" id="modalPrecio">$0.00</div>
+                    <p class="modal-description" id="modalDescripcion">Descripción completa del producto seleccionado.</p>
+                    
+                    <div class="quantity-control">
+                        <span>Cantidad:</span>
+                        <button class="qty-btn" onclick="cambiarCantidad(-1)">-</button>
+                        <span class="qty-val" id="cantValor">1</span>
+                        <button class="qty-btn" onclick="cambiarCantidad(1)">+</button>
+                    </div>
+
+                    <div class="modal-actions">
+                        <button class="btn btn-orange" style="width: 100%;" onclick="procesarCompra()">COMPRAR AHORA</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NOTIFICACIÓN DE COMPRA -->
+    <div class="toast-notificacion" id="toast">
+        🛒 ¡Producto añadido a tu pedido correctamente!
+    </div>
+
+    <!-- LÓGICA DE INTERACCIÓN INTERNA -->
+    <script>
+        let cantidadActual = 1;
+
+        function abrirModal(titulo, precio, descripcion, urlImagen) {
+            document.getElementById('modalTitulo').innerText = titulo;
+            document.getElementById('modalPrecio').innerText = precio;
+            document.getElementById('modalDescripcion').innerText = descripcion;
+            document.getElementById('modalImg').src = urlImagen;
+            
+            cantidadActual = 1;
+            document.getElementById('cantValor').innerText = cantidadActual;
+            document.getElementById('modalProducto').classList.add('active');
+        }
+
+        function cerrarModal() {
+            document.getElementById('modalProducto').classList.remove('active');
+        }
+
+        function cerrarModalAfuera(e) {
+            if (e.target.classList.contains('modal-overlay')) {
+                cerrarModal();
+            }
+        }
+
+        function cambiarCantidad(cambio) {
+            cantidadActual += cambio;
+            if (cantidadActual < 1) cantidadActual = 1;
+            document.getElementById('cantValor').innerText = cantidadActual;
+        }
+
+        function procesarCompra() {
+            const titulo = document.getElementById('modalTitulo').innerText;
+            cerrarModal();
+            
+            const toast = document.getElementById('toast');
+            toast.innerText = `🛒 ¡Agregaste ${cantidadActual}x ${titulo} a tu pedido!`;
+            toast.style.display = 'block';
+
+            setTimeout(() => {
+                toast.style.display = 'none';
+            }, 3000);
+        }
+    </script>
+
+</body>
+</html>
